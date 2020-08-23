@@ -7,14 +7,41 @@
 </head>
 <body>
 
+<!--
+    Correct HTML structure and doctype (yes)
+    A title for your document (Title -> "Jensen's About Page")
+    At least two levels of headers (Used h1,h2,h3)
+    At least one paragraph (4 paragraphs)
+    At least one list (General Information list)
+    At least one code snippet (Summer Project Code)
+    At least one hyperlink to an external site (LinkedIn Profile)
+    At least one html link to an anchor within the same document (Contact Info)
+    At least one mailto (Email link under contact info)
+    At least one line break (Line break in first paragraph)
+    At least one horizontal rule (Horizontal rule before new sections)
+    At least one text format other than bold or italics (font type and color in code)
+    At least one HTML comment (one above div and one above list)
+    At least two meta tags (One for charset and one for description of program)
+    At least one quotation (Favorite quote in general information list)
+    At least one HTML entity (Restricted Symbol next to "Credera" in summer internship)
+    At least one HTML symbol (Diamond next to contact info)
+    At least one image (place all images inside a folder named images) (3 images under photography)
+
+    Jensen Eicher
+    CSCI 445 SEC A
+    HTML Basics
+    8/23/20
+-->
+
 <h1><i>About Jensen</i></h1>
 
 <!-- div to allow for entire background color change -->
 <div style="background-color:rgba(86,153,1,0.43);color:white;padding:20px;">
+
     <h2>Early Life</h2>
     <p>I was born in Florida where I met my best friend in preschool. <br>Our families then moved to Colorado together.</p>
-    <h3>General Information</h3>
 
+    <h3>General Information</h3>
     <!-- Unordered list to display my basic information -->
     <ul>
         <li>Age: 22</li>
@@ -25,6 +52,8 @@
         <li>Favorite quote: "It's not what you look at that matters, it's what you see" - Henry David Thoreau</li>
         <li>Contact: Click <a href="#contact">here</a> to view my contact info</li>
     </ul>
+
+    <hr>
 
     <h2>Summer Project</h2>
     <p>Bellow shows a snippet of code from my Field Session project this summer</p>
@@ -41,19 +70,24 @@
     </code>
     </pre>
 
+    <hr>
+
     <h2>Photography</h2>
     <p>I enjoy capturing the world as I see it. Below are some examples of my photography</p>
     <img src="images/2020_06_25%209_25%20PM%20Office%20Lens%20(2).jpg" alt="Central City" width="500" height="700">
     <img src="images/2020_06_25%209_30%20PM%20Office%20Lens%20(2).jpg" alt="Sea Fury" width="700" height="500">
     <img src="images/67747590_950605738609935_5107797544759459840_n.jpg" alt="New Hampshire" width="1000" height="500">
 
+    <hr>
+
     <h2>Summer Internship</h2>
     <p style="color: red; font-size: 40px">Credera &reg;</p>
 
     <hr>
 
-    <h3 style="color: black">&#9830; Contact Me</h3>
-    <a href="mailto:jeicher@mymail.mines.edu">Email</a>
+    <a id="contact" style="color: black; font-size: 22px">&#9830; Contact Me</a>
+    <br>
+    <a href="mailto:jeicher@mymail.mines.edu">By Email</a>
 </div>
 
 </body>
