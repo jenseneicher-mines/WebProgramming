@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Jensen's About Page</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jensen Eicher's About Page">
 </head>
 <body>
 
 <h1><i>About Jensen</i></h1>
 
+<!-- div to allow for entire background color change -->
 <div style="background-color:rgba(86,153,1,0.43);color:white;padding:20px;">
-    <h2>London</h2>
-    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <h2>Early Life</h2>
+    <p>I was born in Florida where I met my best friend in preschool. <br>Our families then moved to Colorado together.</p>
+    <h3>General Information</h3>
+
+    <!-- Unordered list to display my basic information -->
+    <ul>
+        <li>Age: 22</li>
+        <li>Name: Jensen Eicher</li>
+        <li>School: Colorado School of Mines - CS</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jensen-eicher-9a0ab417a/">Jensen's LinkedIn</a> </li>
+        <li>Pronouns: He/Him</li>
+        <li>Favorite quote: "It's not what you look at that matters, it's what you see" - Henry David Thoreau</li>
+        <li>Contact: Click <a href="#contact">here</a> to view my contact info</li>
+    </ul>
+
+    <h2>Summer Project</h2>
+    <p>Bellow shows a snippet of code from my Field Session project this summer</p>
+    <pre>
+    <code style="color: darkred; font-family:courier">
+        convertDateToNum(now) {
+        var start = new Date(now.getFullYear(), 0, 0);
+        var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+        var oneDay = 1000 * 60 * 60 * 24;
+        var day = Math.round(diff / oneDay);
+        console.log('Day of year: ' + day);
+        return day;
+    }
+    </code>
+    </pre>
+
+    <h2>Photography</h2>
+    <p>I enjoy capturing the world as I see it. Below are some examples of my photography</p>
+    <img src="images/2020_06_25%209_25%20PM%20Office%20Lens%20(2).jpg" alt="Central City" width="500" height="700">
+    <img src="images/2020_06_25%209_30%20PM%20Office%20Lens%20(2).jpg" alt="Sea Fury" width="700" height="500">
+    <img src="images/67747590_950605738609935_5107797544759459840_n.jpg" alt="New Hampshire" width="1000" height="500">
+
+    <h2>Summer Internship</h2>
+    <p style="color: red; font-size: 40px">Credera &reg;</p>
+
+    <hr>
+
+    <h3 style="color: black">&#9830; Contact Me</h3>
+    <a href="mailto:jeicher@mymail.mines.edu">Email</a>
 </div>
 
 </body>
