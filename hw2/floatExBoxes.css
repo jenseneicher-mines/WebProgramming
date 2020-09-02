@@ -1,0 +1,41 @@
+/*Create all outer boxes*/
+.outer{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    border: 3px dashed black;
+}
+
+/*Make the first letter bigger than the rest*/
+.big-letter{
+    font-size: 30px;
+}
+
+/*Group select all small boxes and set attributes that are similar*/
+.inner1, .inner2, .inner3{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border: 3px dashed black;
+}
+
+/*Set unique attributes for first inner box*/
+.inner1{
+    float: right;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Set unique attributes for second inner box*/
+.inner2{
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+/*Set unique attributes for third inner box*/
+.inner3{
+    float: right;
+    margin-right: 0px;
+    margin-top: 40px;
+}

@@ -1,0 +1,47 @@
+/*Create side bar, z index was not mentioned for this piece so I left it default*/
+#sidebar {
+    position: fixed;
+    left: 0px;
+    top: 10px;
+    background-color: #6ddb95;
+    width: 100px;
+    height: 100px;
+}
+
+/*Create and move header*/
+h1{
+    position: relative;
+    left: 100px;
+}
+
+/*Create important box*/
+.important{
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    overflow: scroll;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+}
+
+/*Create more important box*/
+.more-important{
+    position: relative;
+    background-color: #b687de;
+    z-index: 0;
+    width: 150px;
+    height: 125px;
+    left: 70px;
+}
+
+/*Create not important box*/
+.not-important{
+    position: relative;
+    overflow: hidden;
+    background-color: #799a25;
+    z-index: 1;
+    width: 125px;
+    height: 125px;
+    top: 30px;
+}
