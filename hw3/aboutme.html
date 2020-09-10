@@ -4,10 +4,27 @@
     <title>Jensen's About Page</title>
     <meta charset="UTF-8">
     <meta name="description" content="Jensen Eicher's About Page">
+    <link rel="stylesheet" type="text/css" href="tables.css" />
+    <link rel="stylesheet" type="text/css" href="aboutme.css" />
 </head>
 <body>
 
 <!--
+Jensen Eicher
+    CSCI 445 SEC A
+    Advanced HTML & CSS
+    9/10/20
+
+HW 3: TA NOTES
+    Tables:
+        Caption (ontop of each table)
+        thead, tbody (All tables)
+        tfoot (all tables)
+        th,tr,td (all tables)
+        colspan (table1), rowspan (table3)
+    Table styling comments are in table.css
+
+HW 1: TA NOTES
     Correct HTML structure and doctype (yes)
     A title for your document (Title -> "Jensen's About Page")
     At least two levels of headers (Used h1,h2,h3)
@@ -19,7 +36,7 @@
     At least one mailto (Email link under contact info)
     At least one line break (Line break in first paragraph)
     At least one horizontal rule (Horizontal rule before new sections)
-    At least one text format other than bold or italics (font type and color in code)
+    At least one text format other than bold or italics (Sub heading under code portion)
     At least one HTML comment (one above div and one above list)
     At least two meta tags (One for charset and one for description of program)
     At least one quotation (Favorite quote in general information list)
@@ -33,10 +50,10 @@
     8/23/20
 -->
 
-<h1><i>About Jensen</i></h1>
+<h1 id="name"><i>About Jensen</i></h1>
 
 <!-- div to allow for entire background color change -->
-<div style="background-color:rgba(86,153,1,0.43);color:white;padding:20px;">
+<div class="div1">
 
     <h2>Early Life</h2>
     <p>I was born in Florida where I met my best friend in preschool. <br>Our families then moved to Colorado together.</p>
@@ -58,7 +75,7 @@
     <h2>Summer Project</h2>
     <p>Bellow shows a snippet of code from my Field Session project this summer</p>
     <pre>
-    <code style="color: darkred; font-family:courier">
+    <code id="code">
         convertDateToNum(now) {
         var start = new Date(now.getFullYear(), 0, 0);
         var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
@@ -69,82 +86,115 @@
     }
     </code>
         <sub>
-            <p>*The code above was written by me</p>
+            *The code above was written by me
         </sub>
     </pre>
 
+    <hr>
+
     <h2>Personal Data Tables</h2>
-    <table style="width:100%">
+    <table id="t01" class = center>
         <caption><b>Sports</b></caption>
-        <tr>
-            <th>Sport</th>
-            <th>Duration</th>
-        </tr>
+        <thead>
+            <tr>
+                <th colspan="1">Sport</th>
+                <th colspan="2">Duration</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
         <tr>
             <td>Parkour</td>
             <td>Aug 2010 - present</td>
+            <td>Years of practice: 11</td>
         </tr>
         <tr>
             <td>Speed Skating</td>
             <td>Aug 2013 - present</td>
+            <td>Years of practice: 8</td>
         </tr>
         <tr>
             <td>Mountain Biking</td>
             <td>Jul 2007 - 2009</td>
+            <td>Years of practice: 2</td>
         </tr>
         <tr>
             <td>Skate Boarding</td>
             <td>Jan 2012 - present</td>
+            <td>Years of practice: 9</td>
         </tr>
+        </tbody>
+        <tfoot id = "f01">
+            <tr>
+                <td>Still Proficient</td>
+                <td>yes</td>
+                <td>yes</td>
+            </tr>
+        </tfoot>
     </table>
 
     <hr>
 
-    <table style="width:100%">
+    <table id="t02" class = center>
         <caption><b>Hobbies</b></caption>
+        <thead>
+            <tr>
+                <th>Hobby</th>
+                <th>Years of Practice</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
+            <tr id="one">
+                <td>Blacksmithing</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Wood working</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Painting</td>
+                <td>2.5</td>
+            </tr>
+        </tbody>
+        <tfoot id = "f02">
         <tr>
-            <th>Hobby</th>
-            <th>Years of Practice</th>
+            <td>Still Proficient</td>
+            <td>no</td>
         </tr>
-        <tr>
-            <td>Blacksmithing</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>Wood working</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>Painting</td>
-            <td>2.5</td>
-        </tr>
+        </tfoot>
     </table>
 
     <hr>
 
-    <table style="width:100%">
-        <caption><b>Hobbies</b></caption>
-        <td colspan="3">
-        <tr>
-            <th>Sport</th>
-            <th>Duration</th>
-        </tr>
-        <tr>
-            <td>Parkour</td>
-            <td>Aug 2010 - present</td>
-        </tr>
-        <tr>
-            <td>Speed Skating</td>
-            <td>Aug 2013 - present</td>
-        </tr>
-        <tr>
-            <td>Mountain Biking</td>
-            <td>Jul 2007 - 2009</td>
-        </tr>
-        <tr>
-            <td>Skate Boarding</td>
-            <td>Jan 2012 - present</td>
-        </tr>
+    <table id="t03" class = center>
+        <caption><b>Classes</b></caption>
+        <thead>
+            <tr>
+                <th rowspan="1">Computer Science</th>
+                <th>Compsci Sets</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
+            <tr>
+                <td>261</td>
+                <td rowspan="0">262</td>
+            </tr>
+            <tr>
+                <td>Programming Languages</td>
+            </tr>
+            <tr>
+                <td>Computer Organization</td>
+            </tr>
+            <tr>
+                <td>CSCI 101</td>
+            </tr>
+        </tbody>
+        <tfoot id = "f03">
+            <tr>
+                <td>Still Proficient</td>
+                <td>yes</td>
+            </tr>
+        </tfoot>
     </table>
 
     <h2>Photography</h2>
@@ -164,6 +214,14 @@
     <br>
     <a href="mailto:jeicher@mymail.mines.edu">By Email</a>
 </div>
+
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+             src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Valid CSS!" />
+    </a>
+</p>
 
 </body>
 </html>
