@@ -1,0 +1,82 @@
+/*Jensen Eicher, Web Programming, HW2*/
+
+/*Change background and all text colors and styles globally*/
+body {
+    background-color: #f4ffe4;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: #333333;
+}
+
+/*Create Website Header*/
+h1 {
+    font-weight: bold;
+    background-color: #d5edb3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-shadow: 3px 3px #a8dc5a;
+    border: 2px solid #333333;
+    border-radius: 15px;
+    background-image: url("turtle2.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    box-shadow: 3px 3px #81a83c;
+}
+
+/*Create Padding for content so it has space between the wrapper*/
+#content{
+    padding: 8px 8px 8px 8px;
+}
+
+/*Bold company name*/
+.company_name {
+    font-weight: bold;
+}
+
+/*Indent first paragraph*/
+#intro{
+    text-indent: 1.5em;
+}
+
+/*Add custom spacing for list items*/
+#services{
+    line-height: 1.5;
+}
+
+/*Edit the company motto and apply specified border*/
+.motto{
+    font-style: italic;
+    text-align: center;
+    border: 4px ridge #99aa33;
+    border-left: 16px ridge #99aa33;
+}
+
+/*Stylize the wrapper to make it white and fit the page/header as specified*/
+#wrapper{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    min-height: 550px;
+    min-width: 600px;
+}
+
+/* Stylize the navigation menu with different background color and borders */
+nav a{
+    background-color: #98bf21;
+    border: 1px solid #333333;
+    padding: 5px 15px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    box-shadow: 3px 3px #81a83c;
+}
+
+/* found this online and thought it was cool -- https://www.washington.edu/accesscomputing/webd2/student/unit3/module6/lesson2.html */
+nav a:hover, nav a:focus {
+    color: black;
+    background-color: #799a25;
+    font-weight: bold;
+}

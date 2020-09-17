@@ -1,0 +1,82 @@
+/*
+Jensen Eicher
+    CSCI 445 SEC A
+    Advanced HTML & CSS
+    9/10/20
+
+TA NOTES:
+At least two elements with specified fonts (h1 (name) and code)
+A background image (may be repeated, doesn't have to be for the entire page) (background image of tree)
+Style the HTML code (put it in a div, if not already done) (div is in, class name div1)
+Style one or more aspects of an element with a class selector (used .div1 to style div)
+Style one or more aspects of an element with an id selector (used div > p to select all ids with p)
+Style the image(s) as you see fit (created a border with highlights, a hover, and changing opacity)
+Style each of the following pseudo-classes differently
+    link (blue)
+    visited (purple)
+    hover (black)
+    active (grey)
+*/
+
+#code {
+    color: #e82c2c;
+    font-family: courier;
+    text-shadow: 1px 1px black;
+}
+
+#name {
+    font-family: Bahnschrift;
+    color: whitesmoke;
+}
+
+body {
+    background-image: url("images/backroundimg.jpg");
+}
+
+.div1 {
+    background-color:rgba(220,220,220,0.43);
+    color:white;
+    padding:20px;
+}
+
+div > p {
+    color: #e3e3e3;
+}
+
+img{
+    border-radius: 8px;
+    border: 5px ridge black;
+    opacity: 50%;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(199, 177, 67, 0.5);
+    opacity: 100%;
+}
+
+a:link{
+    color: #64a4ef;
+}
+
+a:visited {
+    color: #c78cfa;
+}
+
+a:hover{
+    color: black;
+}
+
+a:active {
+    color: #292932;
+}
+
+section {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+article {
+    font-size: 15px;
+    font-weight: bold;
+}

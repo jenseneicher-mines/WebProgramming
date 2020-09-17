@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jensen's About Page</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jensen Eicher's About Page">
+    <link rel="stylesheet" type="text/css" href="tables.css" />
+    <link rel="stylesheet" type="text/css" href="aboutme.css" />
+    <link rel="stylesheet" type="text/css" href="nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--
+Jensen Eicher
+    CSCI 445 SEC A
+    Advanced HTML & CSS
+    9/10/20
+
+HW 3: TA NOTES
+    Tables:
+        Caption (ontop of each table)
+        thead, tbody (All tables)
+        tfoot (all tables)
+        th,tr,td (all tables)
+        colspan (table1), rowspan (table3)
+    Table styling comments are in table.css
+
+HW 1: TA NOTES
+    Correct HTML structure and doctype (yes)
+    A title for your document (Title -> "Jensen's About Page")
+    At least two levels of headers (Used h1,h2,h3)
+    At least one paragraph (4 paragraphs)
+    At least one list (General Information list)
+    At least one code snippet (Summer Project Code)
+    At least one hyperlink to an external site (LinkedIn Profile)
+    At least one html link to an anchor within the same document (Contact Info)
+    At least one mailto (Email link under contact info)
+    At least one line break (Line break in first paragraph)
+    At least one horizontal rule (Horizontal rule before new sections)
+    At least one text format other than bold or italics (Sub heading under code portion)
+    At least one HTML comment (one above div and one above list)
+    At least two meta tags (One for charset and one for description of program)
+    At least one quotation (Favorite quote in general information list)
+    At least one HTML entity (Restricted Symbol next to "Credera" in summer internship)
+    At least one HTML symbol (Diamond next to contact info)
+    At least one image (place all images inside a folder named images) (3 images under photography)
+
+    Jensen Eicher
+    CSCI 445 SEC A
+    HTML Basics
+    8/23/20
+-->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#aboutme">About Me</a>
+    <div class="dropdown">
+        <button class="dropbtn">CSS Tutorials
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="turtlecoders.html">Turtle Coders</a>
+            <a href="posEx.html">Position Example</a>
+            <a href="clearEx.html">Float and Clear</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <h1 id="name"><em>About Jensen</em></h1>
+</header>
+
+<!-- div to allow for entire background color change -->
+<div class="div1">
+
+    <section>
+        <h2>Early Life</h2>
+    </section>
+
+    <p>I was born in Florida where I met my best friend in preschool. <br>Our families then moved to Colorado together.</p>
+
+    <article>
+        <h3>General Information</h3>
+    </article>
+
+    <!-- Unordered list to display my basic information -->
+    <ul>
+        <li>Age: 22</li>
+        <li>Name: Jensen Eicher</li>
+        <li>School: Colorado School of Mines - CS</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jensen-eicher-9a0ab417a/">Jensen's LinkedIn</a> </li>
+        <li>Pronouns: He/Him</li>
+        <li><p>Favorite quote: "It's not what you look at that matters, it's what you see" - <cite>Henry David Thoreau</cite></p></li>
+        <li>Contact: Click <a href="#contact">here</a> to view my contact info</li>
+    </ul>
+
+    <hr>
+
+    <section>
+        <h2>Summer Project</h2>
+    </section>
+
+    <p>Bellow shows a snippet of code from my Field Session project this summer</p>
+    <pre>
+    <code id="code">
+        convertDateToNum(now) {
+        var start = new Date(now.getFullYear(), 0, 0);
+        var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+        var oneDay = 1000 * 60 * 60 * 24;
+        var day = Math.round(diff / oneDay);
+        console.log('Day of year: ' + day);
+        return day;
+    }
+    </code>
+        <sub>
+            *The code above was written by me
+        </sub>
+    </pre>
+
+    <hr>
+
+    <section>
+        <h2>Personal Data Tables</h2>
+    </section>
+
+    <table id="t01" class = center>
+        <caption><strong>Sports</strong></caption>
+        <thead>
+            <tr>
+                <th colspan="1">Sport</th>
+                <th colspan="2">Duration</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
+        <tr>
+            <td>Parkour</td>
+            <td>Aug 2010 - present</td>
+            <td>Years of practice: 11</td>
+        </tr>
+        <tr>
+            <td>Speed Skating</td>
+            <td>Aug 2013 - present</td>
+            <td>Years of practice: 8</td>
+        </tr>
+        <tr>
+            <td>Mountain Biking</td>
+            <td>Jul 2007 - 2009</td>
+            <td>Years of practice: 2</td>
+        </tr>
+        <tr>
+            <td>Skate Boarding</td>
+            <td>Jan 2012 - present</td>
+            <td>Years of practice: 9</td>
+        </tr>
+        </tbody>
+        <tfoot id = "f01">
+            <tr>
+                <td>Still Proficient</td>
+                <td>yes</td>
+                <td>yes</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <table id="t02" class = center>
+        <caption><strong>Hobbies</strong></caption>
+        <thead>
+            <tr>
+                <th>Hobby</th>
+                <th>Years of Practice</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
+            <tr id="one">
+                <td>Blacksmithing</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Wood working</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Painting</td>
+                <td>2.5</td>
+            </tr>
+        </tbody>
+        <tfoot id = "f02">
+        <tr>
+            <td>Still Proficient</td>
+            <td>no</td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <table id="t03" class = center>
+        <caption><strong>Classes</strong></caption>
+        <thead>
+            <tr>
+                <th rowspan="1">Computer Science</th>
+                <th>Compsci Sets</th>
+            </tr>
+        </thead>
+        <tbody style= "text-align: center">
+            <tr>
+                <td>261</td>
+                <td rowspan="0">262</td>
+            </tr>
+            <tr>
+                <td>Programming Languages</td>
+            </tr>
+            <tr>
+                <td>Computer Organization</td>
+            </tr>
+            <tr>
+                <td>CSCI 101</td>
+            </tr>
+        </tbody>
+        <tfoot id = "f03">
+            <tr>
+                <td>Still Proficient</td>
+                <td>yes</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <section>
+        <h2>Photography</h2>
+    </section>
+
+    <p>I enjoy capturing the world as I see it. Below are some examples of my photography</p>
+    <img src="images/2020_06_25%209_25%20PM%20Office%20Lens%20(2).jpg" alt="Central City" width="500" height="700">
+    <img src="images/2020_06_25%209_30%20PM%20Office%20Lens%20(2).jpg" alt="Sea Fury" width="700" height="500">
+    <img src="images/67747590_950605738609935_5107797544759459840_n.jpg" alt="New Hampshire" width="1000" height="500">
+
+    <hr>
+
+    <section>
+        <h2>Summer Internship</h2>
+    </section>
+
+    <p style="color: red; font-size: 40px">Credera &reg;</p>
+
+    <hr>
+
+    <a id="contact" style="color: black; font-size: 22px">&#9830; Contact Me</a>
+    <br>
+    <a href="mailto:jeicher@mymail.mines.edu">By Email</a>
+</div>
+
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+             src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Valid CSS!" />
+    </a>
+</p>
+
+</body>
+</html>

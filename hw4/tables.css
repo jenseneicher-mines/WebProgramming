@@ -1,0 +1,94 @@
+
+/*
+Jensen Eicher
+    CSCI 445 SEC A
+    Advanced HTML & CSS
+    9/10/20
+
+TA NOTES:
+Table Styling:
+        All three tables should be styled differently. (yes)
+        Each of these styles must be represented in at least one table:
+            Solid border around the table and between cells (yes)
+            Background color for the header with a complementary font color (yes separate colors)
+            Header and footer of a single table are different colors (background & text) (yes)
+            Dashed bottom border for some td element (do not overlap other borders) (bottom of table2s first row)
+            Special styling for either first or last element  (hint: use last-of-type or first-of-type pseudo-class). (first of type for caption and last of type for footer)
+            Background color for alternating rows (hint: nth-of-type pseudo-class) (alternating row color for table 1 and 3)
+            Tables should be centered, with a top margin to provide space between tables. (tables are centered and has a header of 30px)
+            Use reasonable formatting for the captions.  They should stand out from the rest of the headers and tables on the page. (large and yellow)
+            Feel free to experiment with other styling as you see fit. (hover for tables)
+*/
+#t01 {
+    width: 100%;
+    background-color: #bef5ee;
+    border: 1px solid black;
+}
+
+#t02 {
+    width: 30%;
+    background-color: #90ef9d;
+    border: 1px solid black;
+}
+
+#t03 {
+    width: 30%;
+    background-color: #efd790;
+    border: 1px solid black;
+}
+
+#f03, #f01 {
+    background-color: #24f145;
+    font-size: 12px;
+    font-style: italic;
+    color: white;
+}
+
+caption:first-of-type {
+    color: yellow;
+}
+
+tfoot:last-of-type {
+    color: #ff0000;
+}
+
+#f02 {
+    background-color: #5a0505;
+}
+
+#one td {
+    border-bottom: dashed black;
+}
+
+#t03 tr:nth-child(even) {
+    background: #d0b06e
+}
+
+#t01 tr:nth-child(even) {
+    background: #a0d5ce
+}
+
+th,td {
+    border: 1px solid black;
+    text-shadow: 1px 1px black;
+}
+
+caption {
+    text-shadow: 1px 1px black;
+    font-size: 40px;
+}
+
+thead {
+    background-color: #64a4ef;
+    font-size: 21px;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+td:hover {
+    background-color: #f5f5f5;
+}

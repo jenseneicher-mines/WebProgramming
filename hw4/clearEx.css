@@ -1,0 +1,27 @@
+/*Reposition and style the turtle photo*/
+#turtle_left{
+    float: left;
+    border: inset #b687de;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*Reposition and style the cat photo*/
+#cat_right{
+    float: right;
+    border: inset seagreen;
+    margin: 20px;
+}
+
+/*Set background colors*/
+.div3{
+    background-color: lightblue;
+}
+
+.div4{
+    background-color: indianred;
+}
+
+/*When clear is used the cat's div (which is right aligned) changes size*/
+.clear-it {  clear: both; }
