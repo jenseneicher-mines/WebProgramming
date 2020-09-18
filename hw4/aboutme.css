@@ -18,10 +18,23 @@ Style each of the following pseudo-classes differently
     active (grey)
 */
 
+/*Found this cool ability to scroll for long pieces of text when window is resized on mobile or desktop: https://stackoverflow.com/questions/31967757/resize-pre-element-by-dragging*/
+pre {
+    tab-size: 2;
+    text-align : left;
+    height: auto;
+    max-height: 240px;
+    overflow: auto;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
+
 #code {
     color: #e82c2c;
     font-family: courier;
     text-shadow: 1px 1px black;
+    resize: both;
 }
 
 #name {

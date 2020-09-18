@@ -53,21 +53,14 @@ HW 1: TA NOTES
     HTML Basics
     8/23/20
 -->
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#aboutme">About Me</a>
-    <div class="dropdown">
-        <button class="dropbtn">CSS Tutorials
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="turtlecoders.html">Turtle Coders</a>
-            <a href="posEx.html">Position Example</a>
-            <a href="clearEx.html">Float and Clear</a>
-        </div>
-    </div>
+<div class="navbar" id="myNavBar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="tutorials.html">CSS Tutorials</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <em class="fa fa-bars"></em>
+    </a>
 </div>
-
 <header>
     <h1 id="name"><em>About Jensen</em></h1>
 </header>
@@ -234,9 +227,9 @@ HW 1: TA NOTES
     </section>
 
     <p>I enjoy capturing the world as I see it. Below are some examples of my photography</p>
-    <img src="images/2020_06_25%209_25%20PM%20Office%20Lens%20(2).jpg" alt="Central City" width="500" height="700">
-    <img src="images/2020_06_25%209_30%20PM%20Office%20Lens%20(2).jpg" alt="Sea Fury" width="700" height="500">
-    <img src="images/67747590_950605738609935_5107797544759459840_n.jpg" alt="New Hampshire" width="1000" height="500">
+    <img src="images/2020_06_25%209_25%20PM%20Office%20Lens%20(2).jpg" alt="Central City" class="town">
+    <img src="images/2020_06_25%209_30%20PM%20Office%20Lens%20(2).jpg" alt="Sea Fury" class="airplane">
+    <img src="images/67747590_950605738609935_5107797544759459840_n.jpg" alt="New Hampshire" class="fall">
 
     <hr>
 
@@ -260,6 +253,17 @@ HW 1: TA NOTES
              alt="Valid CSS!" />
     </a>
 </p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myNavBar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
 
 </body>
 </html>
