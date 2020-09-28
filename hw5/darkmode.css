@@ -1,0 +1,207 @@
+/*
+    Jensen Eicher
+    CSCI 445 SEC A
+    Javascript basics
+    9/27/20
+*/
+
+/*creating dark mode toggle found here https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+:root {
+    --primary-color: #034425;
+    --secondary-color: #a6e35c;
+    --font-color: #2f2e2e;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #d7a050;
+    --secondary-color: #eceeef;
+    --font-color: #e1e1ff;
+    --bg-color: #252116;
+    --heading-color: #d7a050;
+}
+
+body {
+    font-family: "fantasy", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-family: "cursive", serif;
+    font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+a:hover, a:focus {
+    border-bottom: 3px solid currentColor;
+}
+
+section {
+    max-width: 68%;
+    margin: 0 auto;
+}
+
+.post-meta {
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 4vh;
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+    .navbar2 a {
+        display: flex;
+        color: #f2f2f2;
+        background-color: transparent;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    li {
+        background: black;
+        border: 1px solid #26ff00;
+        padding-right: 20%;
+        padding-left: 20%;
+        width: 15%;
+        border-radius: 15px;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar2 a {
+        float: left;
+        display: inline;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Imaging formatting*/
+.arrow {
+    width: 20%;
+    height: 20%;
+    border: none;
+}
+
+.navbar2 {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar2 a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar2 a.active {
+    background-color: #f3cd76;
+    color: white;
+}
+
+.navbar2 .icon {
+    display: none;
+}
