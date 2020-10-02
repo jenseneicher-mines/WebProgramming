@@ -1,0 +1,81 @@
+.grid {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-gap: 1em;
+    align-content: flex-start;
+}
+
+header, footer {
+    grid-column: 1 / 4;
+}
+
+@media all and (max-width: 700px) {
+    aside,
+    article {
+        grid-column: 1 / 4;
+    }
+    main {
+        grid-column: 1 / 4;
+    }
+}
+
+/* Demo Specific Styles */
+body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+}
+
+header,
+main,
+aside,
+article,
+footer {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
+
+article {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+main {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#q1A {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+
+#l1 {
+    align-content: space-around;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#l2 {
+    align-content: space-around;
+    font-size: 20px;
+    color: greenyellow;
+}
+
+#home,
+#military,
+#common,
+#custom {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #8bdbf3;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="quiz.css" />
+    <script src="quiz.js"></script>
+</head>
+<body>
+<div class="grid">
+    <header>
+        Airplane Facts!
+    </header>
+
+    <main>
+        <p>
+        <label id="l1">Question:</label>
+            <br>
+        <span id="q1A"></span>
+        <br>
+        <input id="Radio1" type="radio" class="radio" name="group1" data-value="true" />true
+        <input id="Radio2" type="radio" class="radio" name="group1" data-value="false" />false
+        <input type="button" id="next" value="Next Question">
+            <br>
+            <label id="l2"></label>
+        </p>
+    </main>
+
+    <aside class="sidebar-right", id="side">
+        <p>
+        Questions Attempted
+            <br>
+        </p>
+    </aside>
+
+    <footer>
+        <h1>Choose a type of airplane:</h1>
+        <br>
+        <input type="button" id="home" value="Home Built">
+        <input type="button" id="military" value="Military">
+        <input type="button" id="common" value="Common">
+        <input type="button" id="custom" value="Custom">
+        <input type="button" id="results" value="Results">
+        <input type="button" id="reset" value="Reset">
+    </footer>
+</div>
+
+</body>
+</html>
