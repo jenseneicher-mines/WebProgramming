@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="grid">
-    <header>
+    <header id="header">
         Airplane Facts!
     </header>
 
@@ -19,30 +19,35 @@
             <br>
         <span id="q1A"></span>
         <br>
-        <input id="Radio1" type="radio" class="radio" name="group1" data-value="true" />true
-        <input id="Radio2" type="radio" class="radio" name="group1" data-value="false" />false
-        <input type="button" id="next" value="Next Question">
+            <span id="l4">
+                <input id="Radio1" type="radio" class="radio" name="group1" data-value="true" />true
+                <input id="Radio2" type="radio" class="radio" name="group1" data-value="false" />false
+                <input type="button" id="next" value="Next Question">
+            </span>
             <br>
             <label id="l2"></label>
+            <br>
+            <label id="l3"></label>
+            <label id="l5">Please Select a Question Set Below</label>
         </p>
     </main>
 
-    <aside class="sidebar-right", id="side">
+    <aside class="sidebar-right" id="side">
         <p>
-        Questions Attempted
+            Questions Attempted
             <br>
         </p>
     </aside>
 
     <footer>
-        <h1>Choose a type of airplane:</h1>
+        <h1>Choose a Type of Airplane:</h1>
         <br>
         <input type="button" id="home" value="Home Built">
         <input type="button" id="military" value="Military">
         <input type="button" id="common" value="Common">
         <input type="button" id="custom" value="Custom">
         <input type="button" id="results" value="Results">
-        <input type="button" id="reset" value="Reset">
+        <input type="button" id="reset" value="Play Again">
     </footer>
 </div>
 
