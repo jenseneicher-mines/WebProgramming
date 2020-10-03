@@ -70,13 +70,14 @@ header {
 
 #q1A {
     font-size: 20px;
+    background-color: #b69c81;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #l1 {
     align-content: space-around;
-    font-size: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    font-size: 25px;
 }
 
 #l2 {
@@ -89,12 +90,6 @@ header {
     align-content: space-around;
     font-size: 20px;
     color: red;
-}
-
-#l5 {
-    align-content: space-around;
-    font-size: 20px;
-    font-weight: bold;
 }
 
 #home,

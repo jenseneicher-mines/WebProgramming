@@ -5,8 +5,9 @@ $(function() {
     let attempted = "";
     let arr = [];
     let totalScore = 0;
-    $(document.getElementById("l1")).hide();
+    $(document.getElementById("q1A")).text("Please Select a Question Set Below");
     $(document.getElementById("l4")).hide();
+    $(document.getElementById("l1")).hide();
 
     $("#home").click(function () {
         score = 0;
@@ -81,7 +82,7 @@ $(function() {
         $(document.getElementById("l2")).text("");
         $(document.getElementById("l3")).text("");
         if(i > window.category.questions.length - 1){
-            $(document.getElementById("q1A")).text(score);
+            $(document.getElementById("q1A")).text("Score:" + score);
             return;
         }
 
@@ -107,7 +108,7 @@ $(function() {
         document.getElementById("Radio2").checked = false;
         i = i + 1;
         if(i > window.category.questions.length - 1){
-            $(document.getElementById("q1A")).text(score);
+            $(document.getElementById("q1A")).text("Score: " + score);
             i = 0;
             totalScore = totalScore + score;
             score = 0;
