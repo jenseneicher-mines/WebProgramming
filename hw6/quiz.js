@@ -13,8 +13,7 @@ $(function() {
         score = 0;
         i = 0;
         $(document.getElementById("next").disabled = false);
-        $(document.getElementById("l1")).text("Question: ");
-        $(document.getElementById("l1")).show();
+        $(document.getElementById("l1")).text("Question: ").show();
         $(document.getElementById("l4")).show();
         $(document.getElementById("l5")).hide();
         window.category = {
@@ -29,8 +28,7 @@ $(function() {
         score = 0;
         i = 0;
         $(document.getElementById("next").disabled = false);
-        $(document.getElementById("l1")).text("Question: ");
-        $(document.getElementById("l1")).show();
+        $(document.getElementById("l1")).text("Question: ").show();
         $(document.getElementById("l4")).show();
         $(document.getElementById("l5")).hide();
         window.category = {
@@ -45,8 +43,7 @@ $(function() {
         score = 0;
         i = 0;
         $(document.getElementById("next").disabled = false);
-        $(document.getElementById("l1")).text("Question: ");
-        $(document.getElementById("l1")).show();
+        $(document.getElementById("l1")).text("Question: ").show();
         $(document.getElementById("l4")).show();
         $(document.getElementById("l5")).hide();
         window.category = {
@@ -61,8 +58,7 @@ $(function() {
         score = 0;
         i = 0;
         $(document.getElementById("next").disabled = false);
-        $(document.getElementById("l1")).text("Question: ");
-        $(document.getElementById("l1")).show();
+        $(document.getElementById("l1")).text("Question: ").show();
         $(document.getElementById("l4")).show();
         $(document.getElementById("l5")).hide();
         window.category = {
@@ -104,8 +100,8 @@ $(function() {
         if ((document.getElementById("Radio2").checked) && (window.category.answers[i]) == 1){
             $(document.getElementById("l3")).text("Incorrect");
         }
-        document.getElementById("Radio1").checked = false;
-        document.getElementById("Radio2").checked = false;
+        $(document.getElementById("Radio1")).checked = false;
+        $(document.getElementById("Radio2")).checked = false;
         i = i + 1;
         if(i > window.category.questions.length - 1){
             $(document.getElementById("q1A")).text("Score: " + score);
@@ -121,12 +117,13 @@ $(function() {
     });
 
     $("#results").click(function () {
-        $(document.getElementById("l1")).show()
+        $(document.getElementById("l1")).show().text("Your total score is: ").css("font-weight","Bold");
         $(document.getElementById("l2")).text("");
         $(document.getElementById("l3")).text("");
-        $(document.getElementById("l1")).text("Your total score is: ").css("font-weight","Bold");
-        $(document.getElementById("q1A")).text(totalScore).css("fontSize", "50px").css('color', 'orange');
-        $(document.getElementById("q1A")).animate({"margin-left": '450'});
+        $(document.getElementById("q1A")).text(totalScore).css("fontSize", "50px").css('color', 'orange').animate({"margin-left": '450'}, { easing: 'swing',
+            duration: 1500, complete: function(){
+                alert('Game Over. Press "Play Again" to Repeat the Quiz');
+            }});
         $(document.getElementById("l4")).hide();
         var printer = "";
         for (i = 0; i < arr.length; i++) {
