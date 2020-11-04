@@ -47,17 +47,19 @@ if ($donation == "yes"){
 else {
     $totalWD = $totalWT;
 }
+
 $timestamp = date('Y-m-d H:i:s');
 orderUp($timestamp, $plane, $email2, $planes, $quant, 0.086, $totalWD - $totalWT, $total);
 ?>
 
-Thank you for your order,  <?php echo $_POST["firstname"]; ?> <?php echo $_POST["lastname"]; ?>!<br>
-Billing email address: <?php echo $_POST["email2"]; ?><br>
-You have selected <?php echo $_POST["quant"];?> <?php echo $plane;?><br>
-Subtotal: $<?php echo $total; ?><br>
-Total with tax: $<?php echo $totalWT; ?><br>
-Total including donation: $<?php echo $totalWD; ?>
-
+<div id="final">
+    Thank you for your order, <?php echo $_POST["firstname"]; ?> <?php echo $_POST["lastname"]; ?>!<br>
+    <b>Billing email address: </b> <?php echo $_POST["email2"]; ?><br>
+    You selected <b> <?php echo $_POST["quant"];?> </b> <?php echo $plane;?><br>
+    <b>Subtotal: </b> $<?php echo $total; ?><br>
+    <b>Total with tax: </b> $<?php echo $totalWT; ?><br>
+    <b>Total including donation: </b> $<?php echo $totalWD; ?>
+</div>
 </body>
 </html>
 

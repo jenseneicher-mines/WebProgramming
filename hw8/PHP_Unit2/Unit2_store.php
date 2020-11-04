@@ -38,7 +38,7 @@
             $conn = new mysqli( "localhost","jeicher","UEIYGUWK","f20_jeicher" );
             $stmt = $conn->prepare( $query );
             $stmt->execute();
-            $result = $stmt->get_result();   // <--- add this instead
+            $result = $stmt->get_result();
 
             while ($row = $result->fetch_assoc()) {
                 $image = $row['image'];
@@ -66,8 +66,8 @@
             <?php if (isset($donation) && $donation=="no") echo "checked";?>
                value="no">no
         <br>
-        <input type="submit" name="button" value="Submit"/>
-    </div>
+        <input type="submit" id = "thebutton" name="button" value="Checkout"/>
+    </div>0
     </fieldset>
     <br>
 </form>

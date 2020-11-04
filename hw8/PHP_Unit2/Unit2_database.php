@@ -20,7 +20,7 @@ function hit(){
         }
         else {
             if($quantity - $quant < 5 && $quantity - $quant >= 0){
-                echo "Almost gone! only ";
+                echo "Your selection is almost gone! only ";
                 echo $quantity - $quant;
                 echo " left in stock";
                 echo nl2br("\n");
@@ -35,7 +35,7 @@ function hit(){
     $result = $stmt->get_result();   // <--- add this instead
     if($result->num_rows == 1) {     // <--- change to $result->...!
         while ($data = $result->fetch_assoc()) {
-                echo "Welcome back!";
+                echo "Welcome back, It's good to see you again!";
             }
     }
     else {
@@ -66,7 +66,10 @@ function orderUp($time, $plane, $email, $image, $quant, $tax, $donation, $total)
     $conn = new mysqli( "localhost","jeicher","UEIYGUWK","f20_jeicher" );
     $stmt = $conn->prepare( $query );
     $stmt->execute();
+
+    $query2 = "UPDATE PRODUCTS SET quantity = quantity - '$quant' WHERE image = '$image'";
+    $conn = new mysqli( "localhost","jeicher","UEIYGUWK","f20_jeicher" );
+    $stmt = $conn->prepare( $query2 );
+    $stmt->execute();
 }
-
-
 ?><br>

@@ -1,7 +1,7 @@
 <div class="navbar" id="myNavBar">
     <a href="Unit2_store.php">Home</a>
     <a href="">Airplanes</a>
-    <a href="">About</a>
+    <a href="Unit2_admin.php">Admin</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <em class="fa fa-bars"></em>
     </a>
